@@ -10,7 +10,6 @@ const walkerCounter = getElementById("walker-counter")
 const carCounter = getElementById("car-counter")
 const bikeCounter = getElementById("bike-counter")
 
-
 const walkerBtn = document.getElementById("walker-button");
 walkerBtn.addEventListener("click",onClickCallback1)
 
