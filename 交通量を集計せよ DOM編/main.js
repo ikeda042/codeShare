@@ -2,9 +2,13 @@ let walker = 0;
 let car = 0;
 let bike = 0;
 
-const walkerCounter = document.getElementById("walker-counter");
-const carCounter = document.getElementById("car-counter");
-const bikeCounter = document.getElementById("bike-counter");
+function getElementById(elementID){
+ return document.getElementById(elementID);
+}
+
+const walkerCounter = getElementById("walker-counter")
+const carCounter = getElementById("car-counter")
+const bikeCounter = getElementById("bike-counter")
 
 
 const walkerBtn = document.getElementById("walker-button");
