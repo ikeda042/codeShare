@@ -12,8 +12,8 @@ const bikeCounter = getElementById("bike-counter")
 const carBtn = getElementById("car-button");
 const bikeBtn = getElementById("bike-button");
 const reset = getElementById("reset-button");
+const walkerBtn = getElementById("walker-button");
 
-const walkerBtn = document.getElementById("walker-button");
 walkerBtn.addEventListener("click",() => {
   walker ++;
   walkerCounter?.textContent = walker;
