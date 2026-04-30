@@ -9,6 +9,9 @@ function getElementById(elementID){
 const walkerCounter = getElementById("walker-counter")
 const carCounter = getElementById("car-counter")
 const bikeCounter = getElementById("bike-counter")
+const carBtn = getElementById("car-button");
+const bikeBtn = getElementById("bike-button");
+const reset = getElementById("reset-button");
 
 const walkerBtn = document.getElementById("walker-button");
 walkerBtn.addEventListener("click",() => {
@@ -16,20 +19,17 @@ walkerBtn.addEventListener("click",() => {
   walkerCounter?.textContent = walker;
 })
 
-const carBtn = document.getElementById("car-button");
 carBtn.addEventListener("click",() => {
   car ++;
   carCounter?.textContent = car;
 })
 
-const bikeBtn = document.getElementById("bike-button");
 bikeBtn.addEventListener("click",() => {
   bike ++;
   bikeCounter?.textContent = bike;
 }
 )
 
-const reset = document.getElementById("reset-button");
 reset.addEventListener("click",() => {
   walker = 0;
   car = 0;
