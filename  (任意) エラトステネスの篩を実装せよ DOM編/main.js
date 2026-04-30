@@ -28,9 +28,9 @@ function onClickInit(){
     const tr = document.createElement("tr");
     for (let j = 1; j < 11; j++){
       const td = document.createElement("td")
-      const dataNum = (10 * i + j)
+      const dataNum = (10 * i + j);
       td.textContent = dataNum.toString();
-      td.setAttribute("data-num",dataNum)
+      td.setAttribute("data-num",dataNum);
       tr.appendChild(td);
     }
     table.appendChild(tr);
