@@ -3,12 +3,15 @@
   <body>
     <input id="text" class="fruits" placeholder="hello">
     <p id="p"></p>
-    <p id="2"></p>
+    <p id="p2"></p>
     <script>
       const element = document.getElementById("text");
       const placeholderValue = element.getAttribute("placeholder");
       const p = document.getElementById("p");
+      const p2 = document.getElementById("p2");
       p.textContent = placeholderValue;
+      p2.textContent = element.textContent;
+      
     </script>
   </body>
 </html>
