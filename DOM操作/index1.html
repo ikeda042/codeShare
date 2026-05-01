@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <input id="text" class="fruits" placeholder="hello">
+    <p id="p"></p>
+    <script>
+      const element = document.getElementById("text");
+      const placeholderValue = element.getAttribute("placeholder");
+      const p = document.getElementById("p");
+      p.textContent = placeholderValue;
+    </script>
+  </body>
+</html>
