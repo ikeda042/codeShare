@@ -1,0 +1,46 @@
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <span id="calorie-counter">0</span>
+  <button id="rice">rice </span>
+  <button id="push-ups">push ups </span>
+  <button id="squats">squats </span>
+  <script>
+    let cC = 0;
+    const cCC = document.getElementById("calorie-counter");
+    const riceBtn = document.getElementById("rice");
+    const pushUpsBtn =  document.getElementById("push-ups");
+    const squatsBtn =  document.getElementById("squats");
+    riceBtn.addEventListener("click", onclickRice)
+    pushUpsBtn.addEventListener("click", onclickPush)
+    squatsBtn.addEventListener("click", onclickSquats)
+    
+    function onclickRice(){
+      cC += 100;
+      if (cC > 1000){
+        cC = 1000;
+      }
+      cCC.textContent = cC.toString();
+    }
+    function onclickPush(){
+      cC -= 80;
+      if (cC < 0){
+        cC = 0;
+      }
+      cCC.textContent = cC.toString();
+    }
+
+    function onclickSquats(){
+      cC -= 100;
+      if (cC < 0){
+        cC = 0;
+      }
+      cCC.textContent = cC.toString();
+    }
+
+    
+  </script>
+</body>
+</html>
