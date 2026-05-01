@@ -4,13 +4,11 @@
     <p id="p"></p>
     <p id="p2"></p>
     <script>
-      // 属性の値を取得する方法。
       const element = document.getElementById("text");
+      // 属性の値を取得する方法。この場合だと "hello"　を取得していることになる。
       const placeholderValue = element.getAttribute("placeholder");
       const p = document.getElementById("p");
-      const p2 = document.getElementById("p2");
       p.textContent = placeholderValue;
-      p2.textContent = element.value;
     </script>
   </body>
 </html>
