@@ -138,6 +138,11 @@ CREATE TABLE users (
 INSERT INTO users (email, name, age)
 VALUES('alice@example.com', 'Alice', 30);
 
+--データの削除
+DELETE FROM users WHERE email = 'eric01@example.com';
+
+--データの更新
+UPDATE users SET name = 'Tom', age = 29 WHERE user_id = 30;
 
 --データの取り出し
 SELECT * FROM users WHERE age > 10;
