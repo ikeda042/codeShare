@@ -18,9 +18,9 @@ JOIN schools AS sch
 
 
 -- Step3 
-SELECT t.name as name 
+SELECT DISTINCT t.name as name 
 FROM teachers as t
-JOIN exam_results as e
+LEFT JOIN exam_results as e
 ON t.subject_id = e.subject_id
 WHERE e.score = 100;
 
