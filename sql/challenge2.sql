@@ -31,3 +31,20 @@ JOIN exam_results as e
 ON s.id = e.student_id
 WHERE e.score >= 90
 
+-- step5 
+SELECT s.name as name, 
+sub.name as subject,
+e.score,
+ROUND(a_t.avg_score,0) as average_subject
+FROM exam_results as e 
+JOIN students as s
+ON e.student_id = s.id 
+JOIN subjects as sub 
+ON e.subject_id = sub.id 
+JOIN (
+  SELECT subject_id,
+  AVG(score) as avg_score
+  FROM exam_results
+  GROUP BY subject_id
+) a_t 
+ON e.subject_id = a_t.subject_id;
