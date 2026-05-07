@@ -124,6 +124,7 @@ const arr21 = ["a", "b", "c", "b"];
 console.log(arr21.findIndex(i => i === "b"));
 console.log(arr21.indexOf("b"))
 ```
+## SQLの基本構文
 
 ```SQL
 SELECT * FROM users WHERE age > 10;
