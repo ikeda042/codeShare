@@ -15,3 +15,11 @@ LEFT JOIN subjects AS sub
     ON e.subject_id = sub.id
 JOIN schools AS sch
     ON s.school_id = sch.id
+
+
+-- Step3 
+SELECT t.name as name 
+FROM teachers as t
+JOIN exam_results as e
+ON t.subject_id = e.subject_id
+WHERE e.score = 100;
