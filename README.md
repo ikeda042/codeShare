@@ -127,6 +127,19 @@ console.log(arr21.indexOf("b"))
 ## SQLの基本構文
 
 ```SQL
+--テーブル作成
+CREATE TABLE users (
+  user_id INTEGER PRIMARY KEY,
+  email VARCHAR(255) UNIQUE,
+  name VARCHAR(100),
+  age INTEGER
+);
+-- データの挿入
+INSERT INTO users (email, name, age)
+VALUES('alice@example.com', 'Alice', 30);
+
+
+--データの取り出し
 SELECT * FROM users WHERE age > 10;
 SELECT * FROM users WHERE NOT age > 10;
 SELECT * FROM users WHERE name LIKE "JO%";
