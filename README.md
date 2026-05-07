@@ -225,5 +225,50 @@ SELECT *
 FROM users as u 
 LEFT OUTER JOIN countries as c ON u.country_id = c.id;
 
+--サブクエリ
+SELECT *
+FROM users
+WHERE country_id = (
+  SELECT id
+  FROM countries
+  WHERE name = 'Japan'
+);
+
+-- サブクエリ
+SELECT *
+FROM users as u
+WHERE EXISTS (
+  SELECT 1
+  FROM countries as c
+  WHERE c.id = u.country_id AND c.name = 'Japan'
+);
+
+-- サブクエリ
+SELECT *
+FROM countries
+WHERE id in (
+  SELECT country_id
+  FROM users
+);
+
+-- サブクエリ
+SELECT user_name
+FROM (
+  SELECT u.name as user_name, c.name as country_name
+  FROM users as u
+  JOIN countries as c ON c.id = u.country_id
+)
+WHERE country_name = 'Japan';
+
+--サブクエリ
+SELECT 
+  id, 
+  name, 
+  (
+    SELECT COUNT(*)
+    FROM users
+    WHERE country_id = c.id
+  ) as user_count
+FROM countries as c;
 
 ```
