@@ -23,3 +23,11 @@ FROM teachers as t
 JOIN exam_results as e
 ON t.subject_id = e.subject_id
 WHERE e.score = 100;
+
+-- step4 
+SELECT DISTINCT s.name 
+FROM students as s
+JOIN exam_results as e 
+ON s.id = e.student_id
+WHERE e.score >= 90
+
