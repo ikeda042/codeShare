@@ -156,4 +156,13 @@ SELECT * FROM books ORDER BY published_year ASC;
 SELECT * FROM books ORDER BY price DESC, published_year ASC;
 --ソートして先頭だけ
 SELECT * FROM books ORDER BY publised_year DESC LIMIT 5;
+
+--Group化
+SELECT age, COUNT(id) FROM users GROUP BY age;
+--Group化2
+SELECT artist, genre, COUNT(*)
+FROM songs
+GROUP BY artist, genre
+
+
 ```
