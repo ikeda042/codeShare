@@ -159,6 +159,16 @@ SELECT * FROM books ORDER BY publised_year DESC LIMIT 5;
 
 --Group化
 SELECT age, COUNT(id) FROM users GROUP BY age;
+
+age   COUNT(id)
+----  ---------
+NULL  1        
+17    1        
+18    1        
+25    3        
+30    4        
+31    1       
+
 --Group化2
 SELECT artist, genre, COUNT(*)
 FROM songs
