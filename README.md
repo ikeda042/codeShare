@@ -203,10 +203,27 @@ FROM users as u
 JOIN countries as c ON c.id = u.country_id 
 where c.name = 'Japan';
 
+--JoinとWhere 2
+SELECT u.name as user_name, c.name as country_name FROM users as u 
+JOIN countries as c ON c.id = u.country_id
+WHERE c.name = 'USA'
+
 --JoinとGroupBY
 SELECT c.name, count(*) as cnt 
 FROM users as u 
 JOIN countries as c ON c.id = u.country_id 
 group by c.name;
+
+--3つのJOIN
+SELECT u.name as user_name, cl.name as club_name 
+FROM club_affiliations as cla 
+JOIN users as u ON u.id = cla.user_id 
+JOIN clubs as cl ON cl.id = cla.club_id;
+
+-- LEFT OUTER JOIN
+SELECT * 
+FROM users as u 
+LEFT OUTER JOIN countries as c ON u.country_id = c.id;
+
 
 ```
