@@ -271,4 +271,14 @@ SELECT
   ) as user_count
 FROM countries as c;
 
+--サブクエリ
+SELECT 
+countries.name AS country_name,
+(
+SELECT COUNT(*)
+FROM users WHERE users.country_id = countries.id
+) as users_count
+FROM countries;
+
+
 ```
