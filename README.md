@@ -124,3 +124,10 @@ const arr21 = ["a", "b", "c", "b"];
 console.log(arr21.findIndex(i => i === "b"));
 console.log(arr21.indexOf("b"))
 ```
+
+```SQL
+SELECT * FROM users WHERE age > 10;
+SELECT * FROM users WHERE NOT age > 10;
+SELECT * FROM users WHERE name LIKE "JO%";
+SELECT * FROM users WHERE age < 10 AND age > 30;
+```
