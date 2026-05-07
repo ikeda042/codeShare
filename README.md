@@ -182,4 +182,31 @@ John Taylor     Rock     1
 Kingdom         Pops     2       
 The Loud Suite  Rock     4   
 
+--テーブル結合
+SELECT * 
+FROM users 
+JOIN countries ON countries.id = users.country_id;
+
+--結合　AS
+SELECT * 
+FROM users AS u 
+JOIN countries AS c ON c.id = u.country_id;
+
+--Alliで取得
+SELECT * 
+FROM users AS u 
+JOIN countries AS c ON c.id = u.country_id;
+
+--JoinとWhere
+SELECT * 
+FROM users as u 
+JOIN countries as c ON c.id = u.country_id 
+where c.name = 'Japan';
+
+--JoinとGroupBY
+SELECT c.name, count(*) as cnt 
+FROM users as u 
+JOIN countries as c ON c.id = u.country_id 
+group by c.name;
+
 ```
