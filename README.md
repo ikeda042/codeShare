@@ -164,5 +164,12 @@ SELECT artist, genre, COUNT(*)
 FROM songs
 GROUP BY artist, genre
 
+artist          genre    COUNT(*)
+--------------  -------  --------
+Big-Bang        Hip-hop  3       
+John Taylor     Blues    2       
+John Taylor     Rock     1       
+Kingdom         Pops     2       
+The Loud Suite  Rock     4   
 
 ```
