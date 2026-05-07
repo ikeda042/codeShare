@@ -153,5 +153,7 @@ SELECT * FROM users WHERE age < 10 AND age > 30;
 --ソートして取り出し
 SELECT * FROM books ORDER BY published_year ASC;
 --複数条件でソート
-SELECT * FROM books ORDER BY price DESC, published_year ASC; 
+SELECT * FROM books ORDER BY price DESC, published_year ASC;
+--ソートして先頭だけ
+SELECT * FROM books ORDER BY publised_year DESC LIMIT 5;
 ```
