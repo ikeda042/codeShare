@@ -9,3 +9,15 @@ SELECT title FROM subjects
 LEFT JOIN accounts ON accounts.subject_id = subjects.id
 GROUP BY subjects.title
 HAVING COUNT(accounts.id) < 3;
+
+--科目ごとに集計する
+SELECT subjects.title as sub, SUM(accounts.amount) FROM accounts
+JOIN subjects ON accounts.subject_id = subjects.id
+GROUP BY sub;
+
+--サブクエリでDELETE
+DELETE FROM accounts
+WHERE subject_id = (
+SELECT id FROM subjects 
+where title = "food"
+)
