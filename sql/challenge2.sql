@@ -4,17 +4,17 @@ FROM schools;
 
 -- step2
 SELECT 
-    s.name as student_name,
-    sub.name as subject,
-    e.score as score,
-    sch.name as school_name
+s.name as student_name,
+sub.name as subject,
+e.score as score,
+sch.name as school_name
 FROM students as s
 LEFT JOIN exam_results as e
-    ON s.id = e.student_id
+ON s.id = e.student_id
 LEFT JOIN subjects as sub
-    ON e.subject_id = sub.id
+ON e.subject_id = sub.id
 JOIN schools as sch
-    ON s.school_id = sch.id
+ON s.school_id = sch.id
 
 
 -- Step3 
