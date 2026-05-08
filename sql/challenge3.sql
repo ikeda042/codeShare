@@ -124,3 +124,11 @@ SELECT
  FROM SPORTS 
 WHERE 
 season IN ("always", "spring", "summer", "autumn", "winter")
+
+--step5
+CREATE INDEX idx_players_last_name ON players(last_name);
+CREATE INDEX idx_sports_season ON sports(name);
+CREATE INDEX idx_sport_categories_sport_id
+ON sport_categories(category_id);
+CREATE INDEX idx_sport_players_player_id
+ON sport_players(player_id);
