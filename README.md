@@ -280,5 +280,7 @@ FROM users WHERE users.country_id = countries.id
 ) as users_count
 FROM countries;
 
+--インデックスを張る
+CREATE INDEX posts_content_index ON posts (content)
 
 ```
